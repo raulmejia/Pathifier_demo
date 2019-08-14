@@ -23,8 +23,10 @@ if (!require("stringr")) {
 #### Defining user  variables #######
 ##########################################
 
-dir.create("../Results/")
-results_path<-c("../Results/") # You can set a different path to save your results
+
+args <- commandArgs(trailingOnly = TRUE)
+results_path <- args[1]
+#results_path<-c("../Results/") # You can set a different path to save your results
 
 ################################################
 ####### Defining functions that will be used ###
@@ -52,6 +54,7 @@ list_of_chr_to_df<-function(X){
 #######################################
 ###### Data manipulation ##############
 #######################################
+dir.create(results_path)
 
 kegg_gsets <-kegg.gsets(species = "hsa", id.type = "kegg") # Downloading the most recent keggdb
 save( kegg_gsets,file="../Results/uptdateKeggPathways.RData" )
