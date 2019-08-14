@@ -11,7 +11,7 @@ args <- commandArgs(trailingOnly = TRUE)
 Path_to_your_Matrix<-args[1] # The path to your matrix
 # Path_to_your_Matrix<-c("TCGA_Control_vs_Basal_indicator_10and10.tsv")
 gene_sets_path<-args[2] # The path to your pathway's definition file
-# gene_sets_path<-c("../Results/KEGG_pathways_in_df_genesymbol.tsv")
+# gene_sets_path<-c("../Results/KEGG_pathways_in_df_genesymbol_demo.tsv")
 Path_of_Code<-args[3] # The path to your code
 # Path_of_Code<-c("./")
 Path_of_Results<-args[4] # # where do you want to save your results?
@@ -19,7 +19,7 @@ Path_of_Results<-args[4] # # where do you want to save your results?
 Tumour_subtype<-args[5] # Label for your results
 # Tumour_subtype<-"Basal"
 Stabilizing <- args[6] # Parameter to stabilization of the adjusted curve
-# Stabilizing <- 3 # 
+# Stabilizing <- 4 # 
 Filter_value <- args[7] # Filter low value genes 
 # Filter_value=3.75
 
