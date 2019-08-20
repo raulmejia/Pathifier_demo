@@ -23,11 +23,10 @@ if (!require("stringr")) {
 #### Defining user  variables #######
 ##########################################
 
-
 args <- commandArgs(trailingOnly = TRUE)
 results_path <- args[1]
-#results_path<-c("../Results/") # You can set a different path to save your results
-
+#results_path<-c("../../Results/") # You can set a different path to save your results
+ # WS # load(file="myworkspace.RData")
 ################################################
 ####### Defining functions that will be used ###
 ################################################
@@ -57,11 +56,17 @@ list_of_chr_to_df<-function(X){
 dir.create(results_path)
 
 kegg_gsets <-kegg.gsets(species = "hsa", id.type = "kegg") # Downloading the most recent keggdb
-save( kegg_gsets,file="../Results/uptdateKeggPathways.RData" )
+# WS #  str(kegg_gsets)
+# WS #names(kegg_gsets)
+# WS #  kegg_gsets$kg.sets
+# WS # kegg_gsets$kg.sets[kegg_gsets$sig.idx]
+
+save( kegg_gsets,file=paste0(results_path,"uptdateKeggPathways.RData" ))
 
 KEGG_pathways_in_df <-list_of_chr_to_df(kegg_gsets$kg.sets) # shaping the pathway's data into a data.frame (The genes are in KEGG ids)
 
 Kegghsa <- KEGGREST::keggList("hsa") # retrieving  KEGG ids and genesymbols of the human genes
+# WS # Kegghsa[1:5]
 
 GeneSymbol_kid <- str_extract(Kegghsa, "[:alnum:]+") # Extracting only the genesymbols
 names(GeneSymbol_kid) <- gsub("hsa:","",names(Kegghsa))
@@ -70,6 +75,7 @@ kegg_sets_kid_gs <- kegg_gsets$kg.sets
 for( w in 1:length(kegg_gsets$kg.sets) ){
   kegg_sets_kid_gs[[ names(kegg_gsets$kg.sets)[w] ]] <- GeneSymbol_kid[which(  names(GeneSymbol_kid) %in%  kegg_gsets$kg.sets[[ names(kegg_gsets$kg.sets)[w]   ]])]
 } # Changing the KEGG pathways from KEGG ids to genesymbols
+# WS # kegg_sets_kid_gs
 
 kegg_sets_kid_gs <- lapply(kegg_sets_kid_gs,unique) # deleting duplicated gene symbols from the KEGG pathway's definition
 
@@ -83,3 +89,4 @@ write.table(KEGG_pathways_in_df, file=paste0(results_path,"KEGG_pathways_in_df_i
 save(KEGG_pathways_in_df_genesymbols,file=paste0(results_path,"KEGG_pathways_in_df_in_genesymbols.RData"))
 save(KEGG_pathways_in_df,file=paste0(results_path,"KEGG_pathways_in_df.RData"))
 
+# WS # save.image(file="myworkspace.RData")

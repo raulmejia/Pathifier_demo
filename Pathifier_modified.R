@@ -312,18 +312,16 @@ boxplot(t(PDSmatrix_zscores),main=paste0("PDSz by Pathway"))
 dev.off()
 
 # Ploting the Entire matrix without clustering
-plot_raw_Matrix_png_NO_clustering(PDSmatrix,Tumour_subtype,paste(Path_of_Results,c("heatmap_Raw_PDS_samples_Labels_No_clustering_rows.png"),sep=""))
-plot_raw_Matrix_png_NO_clustering(PDSmatrix_zscores,Tumour_subtype,paste(Path_of_Results,c("heatmap_PDSz_samples_Labels_No_clustering_rows.png"),sep=""))
+# plot_raw_Matrix_png_NO_clustering(PDSmatrix,Tumour_subtype,paste(Path_of_Results,c("heatmap_Raw_PDS_samples_Labels_No_clustering_rows.png"),sep=""))
+# plot_raw_Matrix_png_NO_clustering(PDSmatrix_zscores,Tumour_subtype,paste(Path_of_Results,c("heatmap_PDSz_samples_Labels_No_clustering_rows.png"),sep=""))
 
-
-
-median_dfz_ordered<-median_dfz[order(median_dfz[,2],decreasing = TRUE),]
-plot_raw_Matrix_png_NO_clustering(median_dfz_ordered,Tumour_subtype,paste(Path_of_Results,Tumour_subtype,c("_median_PDSz_No_clustering_rows.png"),sep=""))
-matrix_txt_path<-paste(Path_of_Results,Tumour_subtype,c("_median_PDSz_ordered_matrix.txt"),sep="")
+median_dfz_ordered <- median_dfz[order(median_dfz[,2],decreasing = TRUE),]
+# plot_raw_Matrix_png_NO_clustering(median_dfz_ordered,Tumour_subtype,paste(Path_of_Results,Tumour_subtype,c("_median_PDSz_No_clustering_rows.png"),sep=""))
+matrix_txt_path <- paste(Path_of_Results,Tumour_subtype,c("_median_PDSz_ordered_matrix.txt"),sep="")
 write.table(median_dfz_ordered,file=matrix_txt_path,quote=FALSE,sep="\t",row.names = TRUE,col.names = TRUE)
 
-
 # Plotting the top 20
-plot_raw_Matrix_png_NO_clustering(median_dfz_ordered[1:20,],Tumour_subtype,paste(Path_of_Results,Tumour_subtype,c("_TOP_20_median_PDSz_No_clustering_rows.png"),sep=""))
+# plot_raw_Matrix_png_NO_clustering(median_dfz_ordered[1:20,],Tumour_subtype,paste(Path_of_Results,Tumour_subtype,c("_TOP_20_median_PDSz_No_clustering_rows.png"),sep=""))
+
 matrix_txt_path<-paste(Path_of_Results,Tumour_subtype,c("_median_PDSz_ordered_matrix_Top20.txt"),sep="")
 write.table(median_dfz_ordered[1:20,],file=matrix_txt_path,quote=FALSE,sep="\t",row.names = TRUE,col.names = TRUE)
