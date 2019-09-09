@@ -38,4 +38,3 @@ write.table(detailedResults(myquery)[,c(1,3,4)], file=paste0(results_path,"Drugs
 #searchTermSummary(result)
 #geneCategories()
 #### reading the data
-#setwd("/media/rmejia/ADATA/boba-bk-postsismo/rmejia/Documents/Otros_Proyectos_academicos/Erandi_Drogas/Code/gitcode") ######## borrame baby
