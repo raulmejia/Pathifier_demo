@@ -1,9 +1,15 @@
 ### Pharmacological data bases
 ## Loading required libraries
+if (!require("BiocManager")) {
+  install.packges("BiocManager", ask =FALSE)
+  library(BiocManager)
+}
 if (!require("rDGIdb")) {
   BiocManager::install("rDGIdb", ask =FALSE)
   library(rDGIdb)
 }
+
+
 
 ################################
 ## Data given by the user ######
@@ -22,7 +28,7 @@ myquery <- queryDGIdb(mygenes)
 #detailedResults(myquery)[,c(1,3,4)]
 
 
-dir.create(paste0(results_path,"Drugs/"))
+dir.create(paste0(results_path,"Drugs/"), recursive = TRUE)
 saveRDS(detailedResults(myquery)[,c(1,3,4)],file=paste0(results_path,"Drugs/",Label,"_gen_drug_df_lists.RDS"))
 
 
