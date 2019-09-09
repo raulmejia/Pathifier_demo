@@ -10,19 +10,25 @@ args <- commandArgs(trailingOnly = TRUE)
 ###########################################
 Path_to_your_Matrix<-args[1] # The path to your matrix
 # Path_to_your_Matrix<-c("TCGA_Control_vs_Basal_indicator_10and10.tsv")
+# Path_to_your_Matrix<- choose.files(default = "", caption = "Select files", multi = TRUE, filters = Filters, index = nrow(Filters))
+# Path_to_your_Matrix<- choose.files()
 gene_sets_path<-args[2] # The path to your pathway's definition file
 # gene_sets_path<-c("../Results/KEGG_pathways_in_df_genesymbol_demo.tsv")
 Path_of_Code<-args[3] # The path to your code
 # Path_of_Code<-c("./")
 Path_of_Results<-args[4] # # where do you want to save your results?
 # Path_of_Results<-c("../Results/Pathifier/")
+# Path_of_Results <- choose.dir()
+# choose.dir(default = "", caption = "Select folder")
+
 Tumour_subtype<-args[5] # Label for your results
 # Tumour_subtype<-"Basal"
 Stabilizing <- args[6] # Parameter to stabilization of the adjusted curve
+Stabilizing <- as.numeric( Stabilizing)
 # Stabilizing <- 4 # 
 Filter_value <- args[7] # Filter low value genes 
 # Filter_value=3.75
-
+Filter_value <- as.numeric( Filter_value)
 ###############################################################################
 ### Installing and/or loading required packages
 ###############################################################################
@@ -45,6 +51,10 @@ if (!require("RColorBrewer")) {
 if (!require("som")) {
   install.packages("som", dependencies = TRUE)
   library(som)
+}
+if (!require("utils")) {
+  install.packages("utils", ask =FALSE)
+  library("utils")
 }
 
 source(paste0(Path_of_Code,"plot_raw_Matrix_png.R"))

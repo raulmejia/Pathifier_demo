@@ -1,36 +1,35 @@
 robust_score_bydist. min_exp= 3.75 , min_std= 7.566571 
-pathway  1 > sig: 0.06895115 
-pathway  1  k= 15 ( 15 ) wj= 2 >new sig: 0.06096451 x rejected
-pathway  2 > sig: 0.0781969 
-pathway  2  k= 10 ( 10 ) wj= 2 >new sig: 0.06586011 | accepted!
-pathway  2  k= 9 ( 9 ) wj= 2 >new sig: 0.06306229 x rejected
-pathway  3 > sig: 0.04780839 
-pathway  4 > sig: 0.02529786 
-pathway  5 > sig: 0.03094129 
-pathway  6 > sig: 0.02285766 
-pathway  7 > sig: 0.02398618 
-pathway  8 > sig: 0.06607065 
-pathway  8  k= 15 ( 15 ) wj= 3 >new sig: 0.06754139 x rejected
-pathway  9 > sig: 0.02550241 
-pathway  10 > sig: 0.03435722 
-pathway  11 > sig: 0.03892122 
-pathway  12 > sig: 0.05442052 
-pathway  12  k= 14 ( 14 ) wj= 1 >new sig: 0.03436053 | accepted!
+pathway  1 > sig: 0.07694244 
+pathway  1  k= 15 ( 15 ) wj= 2 >new sig: 0.06922073 x rejected
+pathway  2 > sig: 0.08204816 
+pathway  2  k= 10 ( 10 ) wj= 2 >new sig: 0.05896197 | accepted!
+pathway  2  k= 9 ( 9 ) wj= 1 >new sig: 0.03004355 | accepted!
+pathway  3 > sig: 0.03167947 
+pathway  4 > sig: 0.04567365 
+pathway  5 > sig: 0.03827764 
+pathway  6 > sig: 0.06545211 
+pathway  6  k= 14 ( 14 ) wj= 4 >new sig: 0.03416232 | accepted!
+pathway  7 > sig: 0.04852148 
+pathway  8 > sig: 0.07564474 
+pathway  8  k= 15 ( 15 ) wj= 1 >new sig: 0.07428517 x rejected
+pathway  9 > sig: 0.04532871 
+pathway  10 > sig: 0.03607928 
+pathway  11 > sig: 0.03990603 
+pathway  12 > sig: 0.08047339 
+pathway  12  k= 14 ( 14 ) wj= 5 >new sig: 0.07580181 x rejected
 skipping pathway  13  k1= 1 
 skipping pathway  14  k1= 1 
-pathway  15 > sig: 0.04000763 
-pathway  16 > sig: 0.02208 
-pathway  17 > sig: 0.04305639 
+pathway  15 > sig: 0.08217039 
+pathway  15  k= 9 ( 9 ) wj= 5 >new sig: 0.05085916 | accepted!
+pathway  15  k= 8 ( 8 ) wj= 5 >new sig: 0.04076426 | accepted!
+pathway  16 > sig: 0.01641784 
+pathway  17 > sig: 0.0252929 
 skipping pathway  18  k1= 1 
 skipping pathway  19  k1= 1 
-pathway  20 > sig: 0.01358949 
-pathway  21 > sig: 0.07246415 
-pathway  21  k= 10 ( 10 ) wj= 4 >new sig: 0.05164157 | accepted!
-pathway  21  k= 9 ( 9 ) wj= 4 >new sig: 0.05426263 x rejected
-pathway  22 > sig: 0.07147204 
-pathway  22  k= 10 ( 10 ) wj= 3 >new sig: 0.06546892 x rejected
-pathway  23 > sig: 0.05216301 
-pathway  23  k= 11 ( 11 ) wj= 1 >new sig: 0.004705259 | accepted!
-pathway  24 > sig: 0.0389543 
-pathway  25 > sig: 0.01791736 
+pathway  20 > sig: 0.0139081 
+pathway  21 > sig: 0.0164044 
+pathway  22 > sig: 0.02804288 
+pathway  23 > sig: 0.01563399 
+pathway  24 > sig: 0.03590728 
+pathway  25 > sig: 0.04535537 
 21 pathways processed with start= by ranks 
